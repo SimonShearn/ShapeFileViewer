@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Shape File Viewer</title>
+    <script type="text/javascript" src="Scripts/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="Scripts/ShapeFileLibrary.js"></script>
+    <link rel="stylesheet" type="text/css" href="Content/site.css" />
+</head>
+<body>
+    <h1>Javascript shapefile viewer</h1>
+    <input id="inputFile" size="70" type="file" accept=".shp"  />
+    <div id="divCanvas">
+        <canvas id="canvas1" width="600" height="100" style="border:1px solid #FF0000;" />
+    </div>
+    <div>
+        <a href="Examples/0100_0125_0470_0515_trunk_202.shp" download>Trunk road example shapefile for download</a><br/>
+        <a href="Examples/3538_3547_0572_0580_contour_3242.shp" download>Contour line example shapefile for download</a><br />
+        <a href="Examples/3555_3572_0490_0520_primary_204.shp" download>A-road example shapefile for download</a><br />
+        <a href="Examples/3584_3586_0535_0536_building_grey_25878.shp" download>Building example shapefile for download</a><br />
+        <a href="Examples/3587_0020_0520_0550_rail_804.shp" download>Railway example shapefile for download</a><br />
+    </div>
+    <div id="properties">
+        <div id="fileProperties" class="column1"></div>
+        <div id="recordProperties" class="column2"></div>
+        <div id="performanceProperties" class="column3"></div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        initialize();
+    });
+    </script>
+</body>
+</html>
